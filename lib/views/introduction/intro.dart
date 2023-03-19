@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'views/home/home_page.dart';
+import '../home/home_page.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
