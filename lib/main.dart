@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:robbin_hood_google_soln/views/splash/splash.dart';
+import 'surplus_food_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +18,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const SplashScreen(),
+    );
+ class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Surplus Food App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: SurplusFoodScreen(),
     );
   }
 }
