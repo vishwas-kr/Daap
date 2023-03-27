@@ -176,8 +176,6 @@ class _SurplusFoodScreenState extends State<SurplusFoodScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState.validate()) {
-                      // Submit form
-                      // TODO: Implement form submission logic
                     }
                   },
                   child: Text('Submit'),
