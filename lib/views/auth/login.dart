@@ -54,31 +54,26 @@ class _LoginPageState extends State<LoginPage> {
                   const SizedBox(height: 20.0),
                   ElevatedButton(
                     child: const Text('Login'),
-                    onPressed: () {
-                      ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return const RobinHoodHomePage();
-                                },
-                              ),
-                            );
-                          },
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.purple,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16),
-                              )),
-                          child: const Text('Donate Food'));
-                    },
+                    onPressed: () {},
                   ),
                   ElevatedButton(
                       onPressed: () {
-                        print(_emailController.text);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const RobinHoodHomePage();
+                            },
+                          ),
+                        );
                       },
-                      child: Text("ok")),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.purple,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          )),
+                      child: const Text('Donate Food')),
+                  ElevatedButton(onPressed: () {}, child: Text("ok")),
                   const SizedBox(height: 20.0),
                   GestureDetector(
                     child: const Text('Don\'t have an account? Sign up'),
