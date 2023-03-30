@@ -24,10 +24,17 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: Center(
-      child: Text('Every human deserve food',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+    return Scaffold(
+        body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset("assets/images/food.png"),
+        const SizedBox(height: 15),
+        const Text(
+          'Every human deserve food',
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
+      ],
     ));
   }
 }

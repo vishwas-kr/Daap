@@ -1,32 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:robbin_hood_google_soln/views/auth/signUp.dart';
 import 'package:robbin_hood_google_soln/views/home/home_page.dart';
 
 import '../../utils/app_colors.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confiremPasswordController =
+      TextEditingController();
 
   @override
   void dispose() {
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+    _confiremPasswordController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+        automaticallyImplyLeading: true,
+        iconTheme: const IconThemeData(color: Colors.black87),
+        title: const Text(
+          "Sign Up",
+          style: TextStyle(color: Colors.black87, letterSpacing: 1),
+        ),
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
@@ -36,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("assets/images/food1.png"),
+                  Image.asset("assets/images/signup.png"),
                   const SizedBox(height: 15),
                   TextFormField(
                     controller: _emailController,
@@ -86,6 +98,31 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     obscureText: true,
                   ),
+                  const SizedBox(height: 10),
+                  TextFormField(
+                    controller: _confiremPasswordController,
+                    decoration: InputDecoration(
+                      filled: true,
+                      isDense: true,
+                      hintText: "Confirm Password",
+                      hintStyle: const TextStyle(fontSize: 14),
+                      fillColor: AppColors.lightGrey,
+                      border: OutlineInputBorder(
+                          borderSide:
+                              const BorderSide(color: AppColors.fontColor2),
+                          borderRadius: BorderRadius.circular(15)),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(color: AppColors.fontColor2),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                    ),
+                    obscureText: true,
+                  ),
                   const SizedBox(height: 20.0),
                   SizedBox(
                     width: double.maxFinite,
@@ -97,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                             borderRadius: BorderRadius.circular(10),
                           )),
                       child: const Text(
-                        'Login',
+                        'Sign Up',
                         style: TextStyle(fontSize: 20, letterSpacing: 1),
                       ),
                       onPressed: () {
@@ -115,18 +152,11 @@ class _LoginPageState extends State<LoginPage> {
                   const SizedBox(height: 20.0),
                   GestureDetector(
                     child: const Text(
-                      'Don\'t have an account? Sign up',
+                      'Already have an account?  Login',
                       style: TextStyle(color: Colors.grey),
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return const SignUp();
-                          },
-                        ),
-                      );
+                      // TODO: Navigate to signup page
                     },
                   ),
                 ],

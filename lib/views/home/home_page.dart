@@ -21,7 +21,7 @@ class RobinHoodHomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: const Text(
-          "📍Location",
+          "📍 Mumbai",
           style: TextStyle(color: AppColors.fontColor),
         ),
         actions: const [

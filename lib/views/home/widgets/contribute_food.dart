@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:robbin_hood_google_soln/views/google_map/google_map.dart';
+import 'package:robbin_hood_google_soln/views/register/register.dart';
 
 import '../../../utils/app_colors.dart';
 
@@ -34,7 +36,12 @@ class ContributeFood extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const RegisterScreen()));
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green,
                 shape: RoundedRectangleBorder(
