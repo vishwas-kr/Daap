@@ -127,8 +127,9 @@ class _ShopMapsState extends State<ShopMaps> {
           GoogleMap(
             initialCameraPosition: _kInitialPosition,
             onMapCreated: onMapCreated,
-            myLocationEnabled: true,
-            myLocationButtonEnabled: true,
+
+            //myLocationEnabled: true,
+            //myLocationButtonEnabled: true,
             // zoomControlsEnabled: true,
           ),
           Positioned(
