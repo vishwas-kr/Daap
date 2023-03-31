@@ -66,3 +66,7 @@ The features we can add to this application could be :
 - Adding a interface that is secure for donating money from anywhere in any currency 
 - Adding a leader board that show from which house/restaurant/area/county maximum amount of donations had arrived.
 - Adding a ad window in which one could advertise and the money generated from this will be donated to the local shelter house and NGO's
+
+## App Screenshot
+<img src="assets/images/ss/s4.jpeg" width="250"> <img src="assets/images/ss/s1.jpeg" width="250"> <img src="assets/images/ss/s6.jpeg" width="250">
+<img src="assets/images/ss/s2.jpeg" width="250"> <img src="assets/images/ss/s3.jpeg" width="250"> <img src="assets/images/ss/s5.jpeg" width="250">
